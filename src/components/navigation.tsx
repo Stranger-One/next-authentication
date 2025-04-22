@@ -12,28 +12,28 @@ export const Navigation = () => {
   return (
     <nav className="flex items-center justify-between p-4 bg-gray-800 text-white">
       <div className="text-lg font-bold">My App</div>
-      <ul className="flex space-x-4">
-        <li>
-          <a href="/" className="hover:underline">
-            Home
-          </a>
-        </li>
-        <li>
-          <a href="/about" className="hover:underline">
-            About
-          </a>
-        </li>
-        <li>
-          <a href="/contact" className="hover:underline">
-            Contact
-          </a>
-        </li>
-        <li>
-          <a href="/admin" className="hover:underline">
-            Admin
-          </a>
-        </li>
-      </ul>
+    <ul className="flex space-x-4">
+      <li>
+        <Link href="/" className="hover:underline">
+        Home
+        </Link>
+      </li>
+      <li>
+        <Link href="/about" className="hover:underline">
+        About
+        </Link>
+      </li>
+      <li>
+        <Link href="/contact" className="hover:underline">
+        Contact
+        </Link>
+      </li>
+      <li>
+        <Link href="/admin" className="hover:underline">
+        Admin
+        </Link>
+      </li>
+    </ul>
       <div className="flex items-center space-x-4">
         <SignedOut>
           <SignInButton mode="modal" />

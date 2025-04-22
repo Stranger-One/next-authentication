@@ -1,8 +1,7 @@
-import { auth, currentUser } from "@clerk/nextjs/server";
+import { currentUser } from "@clerk/nextjs/server";
 
 
 export default async function DashboardPage() {
-    const authObj = await auth()
     const userOjb = await currentUser()
 
     // console.log({authObj, userOjb});

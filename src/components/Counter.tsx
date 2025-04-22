@@ -1,19 +1,17 @@
 "use client";
 
-import { useAuth, useUser } from "@clerk/nextjs";
+import { useUser } from "@clerk/nextjs";
 import { useState } from "react";
 
 export default function Counter() {
   const [count, setCount] = useState(0);
 
-//   const { isLoaded, userId, sessionId, getToken } = useAuth();
-  const { isLoaded, isSignedIn, user } = useUser();
+  //   const { isLoaded, userId, sessionId, getToken } = useAuth();
+  const { isLoaded, isSignedIn } = useUser();
 
-//   console.log({isLoaded, isSignedIn, user});
-  
-    if(!isLoaded || !isSignedIn) return null;
+  //   console.log({isLoaded, isSignedIn, user});
 
-
+  if (!isLoaded || !isSignedIn) return null;
 
   return (
     <div className="flex items-center justify-center p-8">
